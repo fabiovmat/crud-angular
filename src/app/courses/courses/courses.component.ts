@@ -12,7 +12,7 @@ export class CoursesComponent implements OnInit {
     {_id: '1', name: 'Angular', category: 'Front-end'}
 
   ];
-  displayedColumns = ['name','category'];
+  displayedColumns = ['name', 'category'];
 
   constructor() {
 
