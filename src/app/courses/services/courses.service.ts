@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { delay, first, tap } from 'rxjs';
+import { catchError, delay, first, of, tap } from 'rxjs';
 
 import { Course } from './../model/course';
 
@@ -26,8 +26,9 @@ export class CoursesService {
           return this.HttpClient.get<Course[]>(this.API)
           .pipe(
             first(),
-            delay(2000),
-            tap(courses => console.log(courses) )
+            delay(1000),
+            //tap(courses => console.log(courses) ),
+            catchError(error => { console.log(error); return of([]) })
           );
 
         //teste

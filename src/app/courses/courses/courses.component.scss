@@ -1,5 +1,16 @@
 table {
   width: 100%;
+  transition: 'open => closed', animate('.5s ease-out'), style{ height: 0 };
+}
+
+.loading-spinner  {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba($color: #000000, $alpha: 0.15);
+  padding: 25px;
+
 }
 
 
