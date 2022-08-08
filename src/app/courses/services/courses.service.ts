@@ -28,7 +28,7 @@ export class CoursesService {
             first(),
             delay(1000),
             //tap(courses => console.log(courses) ),
-            //catchError(error => { console.log(error); return of([]) })
+            catchError(error => { console.log(error); return of([]) })
           );
 
         //teste

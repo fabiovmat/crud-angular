@@ -28,6 +28,25 @@
       </td>
     </ng-container>
 
+<!--Action Column-->
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef>
+        <button mat-icon-button color="accent" aria-label="Adicionar um curso">
+          <mat-icon>add</mat-icon>
+
+        </button>
+
+        <button mat-icon-button color="primary" aria-label="Adicionar um curso">
+          <mat-icon>edity</mat-icon>
+
+        </button>
+      </mat-header-cell>
+
+      <mat-cell *matCellDef="let course">
+
+      </mat-cell>
+
+    </ng-container>
 
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
