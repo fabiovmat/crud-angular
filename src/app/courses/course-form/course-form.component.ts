@@ -15,6 +15,9 @@ export class CourseFormComponent implements OnInit {
 
     this.form = this.formBuilder.group({
 
+      name:[null],
+      category: [null]
+
     });
 
 
