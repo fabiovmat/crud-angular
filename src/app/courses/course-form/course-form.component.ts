@@ -1,7 +1,7 @@
+import { Location } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { Course } from '../model/course';
 import { CoursesService } from './../services/courses.service';
 
 @Component({
@@ -16,7 +16,8 @@ export class CourseFormComponent implements OnInit {
 
   constructor(private formBuilder: FormBuilder,
     private service: CoursesService,
-    private snackBar: MatSnackBar
+    private snackBar: MatSnackBar,
+    private location: Location
 
     ) {
 
@@ -53,7 +54,7 @@ export class CourseFormComponent implements OnInit {
   }
 
   onCancel(){
-   // this.location.back();
+    this.location.back();
 
   }
 

@@ -35,16 +35,24 @@
           <mat-icon (click)="onAdd()">add</mat-icon>
 
         </button>
+        </mat-header-cell>
+
 
         <button mat-icon-button color="primary" aria-label="Adicionar um curso">
           <mat-icon>edity</mat-icon>
 
         </button>
-      </mat-header-cell>
 
-      <mat-cell *matCellDef="let course">
 
-      </mat-cell>
+        <mat-cell *matCellDef="let course">
+          <button mat-icon-button color="primary" aria-label="Editar Curso">
+            <mat-icon (click)="null">edit</mat-icon>
+          </button>
+
+          <button mat-icon-button color="warn" aria-label="Remover Curso">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </mat-cell>
 
     </ng-container>
 
