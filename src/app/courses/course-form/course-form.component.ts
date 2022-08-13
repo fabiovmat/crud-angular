@@ -42,7 +42,7 @@ export class CourseFormComponent implements OnInit {
 
   onSubmit() {
     this.service.save(this.form.value)
-     .subscribe(result => this.onSuccess(), error => this.onError());
+     .subscribe(result => this.onSuccess(), _error => this.onError());
   }
   private onSuccess() {
     this.snackBar.open('Curso salvo com sucesso!', '', { duration: 5000 });
